@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum & Impuls — Media Pembelajaran</title>
+<style>
+:root{--primary:#2563eb;--secondary:#0ea5e9;--dark:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#fff;--line:#e2e8f0;--good:#16a34a;--bad:#dc2626}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 6%;gap:20px}
+.logo{font-weight:800;color:var(--primary);font-size:1.1rem}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{color:var(--dark);text-decoration:none;padding:7px 11px;border-radius:9px;font-size:.9rem}.navlinks a:hover{background:#eff6ff;color:var(--primary)}
+.hero{background:linear-gradient(135deg,#eff6ff,#e0f2fe);padding:70px 6% 65px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;margin:14px 0}.hero p{font-size:1.08rem;color:#475569;max-width:650px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;cursor:pointer;font-size:.95rem}.primary{background:var(--primary);color:#fff}.secondary{background:#fff;color:var(--primary);border:1px solid #bfdbfe}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.illustration{background:#fff;border:1px solid #bfdbfe;border-radius:24px;padding:28px;box-shadow:0 20px 45px rgba(37,99,235,.12)}.track{height:7px;background:#cbd5e1;border-radius:10px;margin:40px 0 25px;position:relative}.ball{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;color:white;font-weight:800;position:absolute;top:-27px}.ball.a{background:#2563eb;left:8%}.ball.b{background:#0ea5e9;right:8%}
+section{padding:65px 6%}.section-title{text-align:center;max-width:760px;margin:0 auto 32px}.section-title h2{font-size:2rem;margin-bottom:8px}.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 5px 18px rgba(15,23,42,.04)}.card h3{margin-top:0}.formula{font-size:1.55rem;font-weight:800;color:var(--primary);background:#eff6ff;padding:12px;border-radius:12px;text-align:center;margin:14px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.sim{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.control{margin:15px 0}.control label{display:flex;justify-content:space-between;font-weight:700}.control input{width:100%;accent-color:var(--primary)}.result{background:#f8fafc;border:1px dashed #94a3b8;border-radius:14px;padding:16px;margin-top:16px}.result strong{color:var(--primary)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left}th{background:#eff6ff}
+.quiz{max-width:800px;margin:auto}.q{margin-bottom:24px}.option{display:block;border:1px solid var(--line);padding:12px;border-radius:10px;margin:8px 0;cursor:pointer;background:#fff}.option:hover{border-color:#93c5fd;background:#f8fbff}.option input{margin-right:8px}.feedback{font-weight:700;margin-top:8px}
+.summary{background:#0f172a;color:#fff;border-radius:22px;padding:30px}.summary li{margin:9px 0}.tip{background:#ecfdf5;border-left:4px solid var(--good);padding:14px;border-radius:10px;margin-top:15px}
+footer{text-align:center;padding:30px;color:#64748b;border-top:1px solid var(--line);background:#fff}
+@media(max-width:850px){.hero,.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:45px}section{padding:48px 5%}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">⚡ Fisika Interaktif</div>
+  <div class="navlinks">
+    <a href="#materi">Materi</a><a href="#simulasi">Simulasi</a><a href="#contoh">Contoh</a><a href="#kuis">Kuis</a><a href="#rangkuman">Rangkuman</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">MEDIA PEMBELAJARAN FISIKA</span>
+    <h1>Momentum<br>& Impuls</h1>
+    <p>Pelajari momentum, impuls, hubungan keduanya, dan hukum kekekalan momentum melalui materi ringkas, simulasi interaktif, contoh soal, dan kuis.</p>
+    <div class="actions"><a href="#materi"><button class="btn primary">Mulai Belajar →</button></a><a href="#simulasi"><button class="btn secondary">Coba Simulasi</button></a></div>
+  </div>
+  <div class="illustration">
+    <h3>💥 Tumbukan Benda</h3><p>Dua benda dapat saling memberikan impuls saat berinteraksi.</p>
+    <div class="track"><div class="ball a">A</div><div class="ball b">B</div></div>
+    <p style="text-align:center;color:#64748b">Momentum total sebelum dan sesudah tumbukan dapat dianalisis.</p>
+  </div>
+</header>
+
+<section id="materi">
+<div class="section-title"><h2>📚 Materi Inti</h2><p>Pahami konsep dari dasar sebelum masuk ke simulasi dan latihan.</p></div>
+<div class="grid">
+<div class="card"><h3>1. Momentum</h3><p>Momentum adalah ukuran kecenderungan benda untuk mempertahankan geraknya. Momentum dipengaruhi massa dan kecepatan.</p><div class="formula">p = m v</div><p><b>p</b> = momentum (kg·m/s), <b>m</b> = massa (kg), <b>v</b> = kecepatan (m/s).</p></div>
+<div class="card"><h3>2. Impuls</h3><p>Impuls adalah efek gaya yang bekerja pada benda selama selang waktu tertentu sehingga mengubah momentum benda.</p><div class="formula">I = F Δt</div><p><b>I</b> = impuls (N·s), <b>F</b> = gaya (N), <b>Δt</b> = selang waktu (s).</p></div>
+<div class="card"><h3>3. Teorema Impuls–Momentum</h3><p>Impuls yang diberikan pada benda sama dengan perubahan momentumnya.</p><div class="formula">I = Δp = p₂ − p₁</div><p>Dengan demikian, gaya yang bekerja selama waktu tertentu dapat mengubah kecepatan benda.</p></div>
+</div>
+</section>
+
+<section style="background:#f1f5f9">
+<div class="section-title"><h2>⚖️ Hukum Kekekalan Momentum</h2><p>Jika sistem tidak mendapat resultan gaya eksternal, momentum total sistem tetap.</p></div>
+<div class="card" style="max-width:900px;margin:auto">
+<div class="formula">Σp<sub>awal</sub> = Σp<sub>akhir</sub></div>
+<p>Untuk dua benda dalam satu dimensi:</p><div class="formula">m₁v₁ + m₂v₂ = m₁v₁′ + m₂v₂′</div>
+<div class="tip">💡 <b>Contoh sehari-hari:</b> ketika dua benda bertumbukan, masing-masing benda dapat mengalami perubahan momentum, tetapi jumlah momentum sistem dapat tetap.</div>
+</div>
+</section>
+
+<section id="simulasi">
+<div class="section-title"><h2>🎮 Simulasi Momentum</h2><p>Ubah massa dan kecepatan benda, lalu amati momentum masing-masing benda dan totalnya.</p></div>
+<div class="two">
+<div class="sim">
+<h3>Benda A</h3>
+<div class="control"><label>Massa A <span id="maVal">2 kg</span></label><input id="ma" type="range" min="1" max="10" step="1" value="2"></div>
+<div class="control"><label>Kecepatan A <span id="vaVal">5 m/s</span></label><input id="va" type="range" min="-10" max="10" step="1" value="5"></div>
+<h3>Benda B</h3>
+<div class="control"><label>Massa B <span id="mbVal">3 kg</span></label><input id="mb" type="range" min="1" max="10" step="1" value="3"></div>
+<div class="control"><label>Kecepatan B <span id="vbVal">−2 m/s</span></label><input id="vb" type="range" min="-10" max="10" step="1" value="-2"></div>
+<button class="btn primary" onclick="hitung()">Hitung Momentum</button>
+</div>
+<div class="sim">
+<h3>📊 Hasil</h3>
+<div class="result" id="hasil">Atur variabel, lalu tekan <b>Hitung Momentum</b>.</div>
+<div class="tip"><b>Interpretasi:</b> tanda positif/negatif menunjukkan arah momentum berdasarkan arah positif yang dipilih.</div>
+</div>
+</div>
+</section>
+
+<section id="contoh">
+<div class="section-title"><h2>📝 Contoh Soal</h2><p>Gunakan konsep dan persamaan untuk menyelesaikan masalah berikut.</p></div>
+<div class="two">
+<div class="card"><h3>Contoh 1 — Momentum</h3><p>Sebuah bola bermassa 0,5 kg bergerak dengan kecepatan 8 m/s. Tentukan momentumnya.</p><div class="formula">p = mv = (0,5)(8) = 4 kg·m/s</div></div>
+<div class="card"><h3>Contoh 2 — Impuls</h3><p>Gaya 20 N bekerja pada benda selama 0,4 s. Tentukan impulsnya.</p><div class="formula">I = FΔt = (20)(0,4) = 8 N·s</div></div>
+</div>
+</section>
+
+<section id="kuis" style="background:#f1f5f9">
+<div class="section-title"><h2>🧠 Kuis Cepat</h2><p>Uji pemahamanmu. Pilih satu jawaban pada setiap soal.</p></div>
+<div class="quiz">
+<form id="quizForm">
+<div class="card q"><h3>1. Rumus momentum yang benar adalah...</h3>
+<label class="option"><input type="radio" name="q1" value="a"> p = FΔt</label><label class="option"><input type="radio" name="q1" value="b"> p = mv</label><label class="option"><input type="radio" name="q1" value="c"> p = m/v</label></div>
+<div class="card q"><h3>2. Satuan SI impuls adalah...</h3>
+<label class="option"><input type="radio" name="q2" value="a"> N·s</label><label class="option"><input type="radio" name="q2" value="b"> kg/s</label><label class="option"><input type="radio" name="q2" value="c"> J/s</label></div>
+<div class="card q"><h3>3. Jika massa benda tetap dan kecepatannya menjadi 2 kali semula, momentumnya...</h3>
+<label class="option"><input type="radio" name="q3" value="a"> tetap</label><label class="option"><input type="radio" name="q3" value="b"> menjadi setengah</label><label class="option"><input type="radio" name="q3" value="c"> menjadi 2 kali</label></div>
+<div class="card q"><h3>4. Hubungan impuls dengan momentum adalah...</h3>
+<label class="option"><input type="radio" name="q4" value="a"> I = Δp</label><label class="option"><input type="radio" name="q4" value="b"> I = p/t</label><label class="option"><input type="radio" name="q4" value="c"> I = m/v</label></div>
+<div class="card q"><h3>5. Hukum kekekalan momentum berlaku ketika...</h3>
+<label class="option"><input type="radio" name="q5" value="a"> resultan gaya eksternal pada sistem nol</label><label class="option"><input type="radio" name="q5" value="b"> benda selalu diam</label><label class="option"><input type="radio" name="q5" value="c"> massa benda berubah</label></div>
+<button type="button" class="btn primary" onclick="cekKuis()">Lihat Nilai</button>
+<div id="nilai" class="result" style="margin-top:16px"></div>
+</form>
+</div>
+</section>
+
+<section id="rangkuman">
+<div class="summary">
+<h2>📌 Rangkuman</h2>
+<ul>
+<li>Momentum: <b>p = mv</b>.</li>
+<li>Impuls: <b>I = FΔt</b>.</li>
+<li>Impuls sama dengan perubahan momentum: <b>I = Δp</b>.</li>
+<li>Jika resultan gaya eksternal sistem nol, berlaku <b>Σp awal = Σp akhir</b>.</li>
+<li>Momentum merupakan besaran vektor, sehingga arah harus diperhatikan.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<strong>Media Pembelajaran Fisika — Momentum & Impuls</strong><br>
+Dibuat untuk mendukung pembelajaran fisika yang interaktif.
+</footer>
+
+<script>
+const ids=['ma','va','mb','vb'];
+function fmt(v){return v<0?'−'+Math.abs(v):v}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+  const x=document.getElementById(id).value;
+  const label={ma:'maVal',va:'vaVal',mb:'mbVal',vb:'vbVal'}[id];
+  const unit={ma:' kg',va:' m/s',mb:' kg',vb:' m/s'}[id];
+  document.getElementById(label).textContent=fmt(Number(x))+unit;
+}));
+function hitung(){
+ const ma=+document.getElementById('ma').value, va=+document.getElementById('va').value;
+ const mb=+document.getElementById('mb').value, vb=+document.getElementById('vb').value;
+ const pa=ma*va,pb=mb*vb,total=pa+pb;
+ document.getElementById('hasil').innerHTML=`<p>Momentum A = <strong>${fmt(pa)} kg·m/s</strong></p><p>Momentum B = <strong>${fmt(pb)} kg·m/s</strong></p><hr><p>Total momentum = <strong>${fmt(total)} kg·m/s</strong></p>`;
+}
+function cekKuis(){
+ const key={q1:'b',q2:'a',q3:'c',q4:'a',q5:'a'};let benar=0;
+ Object.keys(key).forEach(q=>{const a=document.querySelector(`input[name="${q}"]:checked`);if(a&&a.value===key[q])benar++;});
+ const nilai=benar*20;
+ let pesan=nilai>=80?'Bagus! Pemahaman konsep sudah kuat.':nilai>=60?'Cukup baik. Pelajari kembali konsep yang masih keliru.':'Yuk ulangi materi dan coba lagi.';
+ document.getElementById('nilai').innerHTML=`<h3>Nilai: ${nilai}/100</h3><p>${benar} dari 5 jawaban benar. ${pesan}</p>`;
+}
+</script>
+</body>
+</html>
